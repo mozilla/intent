@@ -122,19 +122,12 @@ with tab_try:
     )
 
     if user_query.strip():
-        t0 = time.perf_counter()
         result = norm.normalize(user_query.strip())
-        elapsed_ms = (time.perf_counter() - t0) * 1000
 
-        res_col, meta_col = st.columns([3, 1])
-        with res_col:
-            if result.lower() == user_query.strip().lower():
-                st.success(f"**`{user_query.strip()}`** → no change needed → **`{result}`**")
-            else:
-                st.info(f"**`{user_query.strip()}`** → **`{result}`**")
-
-        with meta_col:
-            st.metric("Latency", f"{elapsed_ms:.2f} ms")
+        if result.lower() == user_query.strip().lower():
+            st.success(f"**`{user_query.strip()}`** → no change needed → **`{result}`**")
+        else:
+            st.info(f"**`{user_query.strip()}`** → **`{result}`**")
 
         # Check if it's in the benchmark dataset
         match = df[df["noisy"].str.lower() == user_query.strip().lower()]

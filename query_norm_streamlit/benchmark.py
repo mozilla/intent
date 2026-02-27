@@ -274,6 +274,33 @@ class RulesNormalizer(Normalizer):
         re.IGNORECASE
     )
 
+    # Common compound words that users type without a space.
+    # Applied per-token so works in multi-token queries too
+    # e.g. "restarants nearme" → "restarants near me" (then GuardedPySpell fixes "restarants")
+    _COMPOUND_SPLITS: dict[str, str] = {
+        "nearme":       "near me",
+        "nearbyme":     "near by me",
+        "newyork":      "new york",
+        "losangeles":   "los angeles",
+        "sanfrancisco": "san francisco",
+        "lasvegас":     "las vegas",
+        "bestbuy":      "best buy",
+        "homedepot":    "home depot",
+        "wholefoods":   "whole foods",
+        "starbucks":    "starbucks",   # already one word, no-op
+        "doordash":     "doordash",
+        "ubereats":     "uber eats",
+        "grubhub":      "grubhub",
+        "openai":       "openai",
+        "chatgpt":      "chatgpt",
+        "youtube":      "youtube",
+        "facebook":     "facebook",
+        "instagram":    "instagram",
+        "whatsapp":     "whatsapp",
+        "linkedin":     "linkedin",
+        "tiktok":       "tiktok",
+    }
+
     def _normalize_flight(self, query: str) -> str:
         q_upper = query.upper()
         def _repl(m):
@@ -314,6 +341,12 @@ class RulesNormalizer(Normalizer):
     def _normalize_product_spacing(self, query: str) -> str:
         return self._PRODUCT_SPACING.sub(lambda m: f"{m.group(1)} {m.group(2)}", query)
 
+    def _normalize_compounds(self, query: str) -> str:
+        """Split known compound tokens anywhere in the query.
+        Works per-token so handles mixed queries like 'restarants nearme'."""
+        tokens = query.lower().split()
+        return " ".join(self._COMPOUND_SPLITS.get(tok, tok) for tok in tokens)
+
     def _normalize_word_order(self, query: str) -> str:
         """Reorder product queries so the brand/product-line token comes first.
 
@@ -343,13 +376,16 @@ class RulesNormalizer(Normalizer):
         # 2. Flight ID normalization
         q = self._normalize_flight(q)
 
-        # 3. Product spacing
+        # 3. Compound splitting (nearme → near me, newyork → new york)
+        q = self._normalize_compounds(q)
+
+        # 4. Product spacing
         q = self._normalize_product_spacing(q)
 
-        # 4. Product word order
+        # 5. Product word order
         q = self._normalize_word_order(q)
 
-        # 5. Clean up extra whitespace
+        # 6. Clean up extra whitespace
         q = re.sub(r'\s+', ' ', q).strip()
 
         return q
@@ -496,9 +532,9 @@ class CombinedV2Normalizer(Normalizer):
                 return q_rf
 
         # Step 3: SymSpell compound splitting for single-token queries only.
-        # GuardedPySpell would corrupt 'nearme'→'name', 'newyork'→'network'.
-        # Only accept the SymSpell result if it actually introduces a space
-        # (i.e. it split the word rather than substituting a different word).
+        # Only accept if SymSpell introduces a space (compound split).
+        # Known compounds (nearme, newyork etc.) are handled by Rules above,
+        # so this catches any remaining edge cases for single-token inputs.
         if self._symspell and ' ' not in q:
             q_sym = self._symspell.normalize(q)
             if ' ' in q_sym:

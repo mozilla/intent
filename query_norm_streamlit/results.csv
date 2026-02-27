@@ -27,14 +27,14 @@ facbook login,facebook login,brand_typo,True,facebook login,True,0.0,0.0
 instagrem,instagram,brand_typo,True,instagram,True,0.0,0.0
 linkdin profile,linkedin profile,brand_typo,True,linking profile,False,0.1875,0.5
 gitub repo,github repo,brand_typo,True,tub repo,False,0.2727272727272727,0.5
-163 SQ,SQ163,flight_order,True,SQ163,True,0.0,0.0
-100 AA,AA100,flight_order,True,AA100,True,0.0,0.0
-417 BA,BA417,flight_order,True,BA417,True,0.0,0.0
-SQ 163,SQ163,flight_order,True,SQ163,True,0.0,0.0
-AA 100,AA100,flight_order,True,AA100,True,0.0,0.0
-815 DL,DL815,flight_order,True,DL815,True,0.0,0.0
-200 UA,UA200,flight_order,True,UA200,True,0.0,0.0
-flight 163 SQ,SQ163,flight_order,True,SQ163,True,0.0,0.0
+163 SQ,SQ163,flight_order,True,sq163,True,0.0,0.0
+100 AA,AA100,flight_order,True,aa100,True,0.0,0.0
+417 BA,BA417,flight_order,True,ba417,True,0.0,0.0
+SQ 163,SQ163,flight_order,True,sq163,True,0.0,0.0
+AA 100,AA100,flight_order,True,aa100,True,0.0,0.0
+815 DL,DL815,flight_order,True,dl815,True,0.0,0.0
+200 UA,UA200,flight_order,True,ua200,True,0.0,0.0
+flight 163 SQ,SQ163,flight_order,True,sq163,True,0.0,0.0
 AA flight 100,AA100,flight_order,True,AA flight 100,False,0.6153846153846154,3.0
 15 iphone,iphone 15,product_order,True,iphone 15,True,0.0,0.0
 pro 14 macbook,macbook pro 14,product_order,True,macbook pro 14,True,0.0,0.0
@@ -171,36 +171,36 @@ youtub video,youtube video,brand_typo,True,youtube video,True,0.0,0.0
 netflic series,netflix series,brand_typo,True,netflix series,True,0.0,0.0
 googl drive,google drive,brand_typo,True,GOOGL,False,0.5833333333333334,1.0
 amzon shopping,amazon shopping,brand_typo,True,amazon shopping,True,0.0,0.0
-spotiffy playlist,spotify playlist,brand_typo,True,spiffy playlets,False,0.375,1.0
+spotiffy playlist,spotify playlist,brand_typo,True,spiffy playlet,False,0.3125,1.0
 facebk messenger,facebook messenger,brand_typo,True,face messenger,False,0.2222222222222222,0.5
 insta stories,instagram stories,brand_typo,True,instar stories,False,0.17647058823529413,0.5
 gihub code,github code,brand_typo,True,hub code,False,0.2727272727272727,0.5
 reddot forum,reddit forum,brand_typo,True,redo forum,False,0.25,0.5
-BA 287,BA287,flight_order,True,BA287,True,0.0,0.0
-502 DL,DL502,flight_order,True,DL502,True,0.0,0.0
-flight UA 441,UA441,flight_order,True,UA441,True,0.0,0.0
-lh 156,LH156,flight_order,True,LH156,True,0.0,0.0
-273 AF,AF273,flight_order,True,AF273,True,0.0,0.0
-EK  89,EK89,flight_order,True,EK89,True,0.0,0.0
-621qr,QR621,flight_order,True,QR621,True,0.0,0.0
-CX 884,CX884,flight_order,True,CX884,True,0.0,0.0
-345 vs,VS345,flight_order,True,VS345,True,0.0,0.0
-KL 714,KL714,flight_order,True,KL714,True,0.0,0.0
-193ib,IB193,flight_order,True,IB193,True,0.0,0.0
-TK 427,TK427,flight_order,True,TK427,True,0.0,0.0
-flight 556 AA,AA556,flight_order,True,AA556,True,0.0,0.0
-738 ba,BA738,flight_order,True,BA738,True,0.0,0.0
-DL 212,DL212,flight_order,True,DL212,True,0.0,0.0
-84ua,UA84,flight_order,True,UA84,True,0.0,0.0
-AF  609,AF609,flight_order,True,AF609,True,0.0,0.0
-445 ek,EK445,flight_order,True,EK445,True,0.0,0.0
-sq 267,SQ267,flight_order,True,SQ267,True,0.0,0.0
-572 CX,CX572,flight_order,True,CX572,True,0.0,0.0
+BA 287,BA287,flight_order,True,ba287,True,0.0,0.0
+502 DL,DL502,flight_order,True,dl502,True,0.0,0.0
+flight UA 441,UA441,flight_order,True,ua441,True,0.0,0.0
+lh 156,LH156,flight_order,True,lh156,True,0.0,0.0
+273 AF,AF273,flight_order,True,af273,True,0.0,0.0
+EK  89,EK89,flight_order,True,ek89,True,0.0,0.0
+621qr,QR621,flight_order,True,qr621,True,0.0,0.0
+CX 884,CX884,flight_order,True,cx884,True,0.0,0.0
+345 vs,VS345,flight_order,True,vs345,True,0.0,0.0
+KL 714,KL714,flight_order,True,kl714,True,0.0,0.0
+193ib,IB193,flight_order,True,ib193,True,0.0,0.0
+TK 427,TK427,flight_order,True,tk427,True,0.0,0.0
+flight 556 AA,AA556,flight_order,True,aa556,True,0.0,0.0
+738 ba,BA738,flight_order,True,ba738,True,0.0,0.0
+DL 212,DL212,flight_order,True,dl212,True,0.0,0.0
+84ua,UA84,flight_order,True,ua84,True,0.0,0.0
+AF  609,AF609,flight_order,True,af609,True,0.0,0.0
+445 ek,EK445,flight_order,True,ek445,True,0.0,0.0
+sq 267,SQ267,flight_order,True,sq267,True,0.0,0.0
+572 CX,CX572,flight_order,True,cx572,True,0.0,0.0
 flight vs314,VS314,flight_order,True,flight vs314,False,0.5833333333333334,1.0
-981 KL,KL981,flight_order,True,KL981,True,0.0,0.0
-IB   456,IB456,flight_order,True,IB456,True,0.0,0.0
-tk 103,TK103,flight_order,True,TK103,True,0.0,0.0
-890 SQ,SQ890,flight_order,True,SQ890,True,0.0,0.0
+981 KL,KL981,flight_order,True,kl981,True,0.0,0.0
+IB   456,IB456,flight_order,True,ib456,True,0.0,0.0
+tk 103,TK103,flight_order,True,tk103,True,0.0,0.0
+890 SQ,SQ890,flight_order,True,sq890,True,0.0,0.0
 13 air macbook,macbook air 13,product_order,True,macbook 13 air,False,0.42857142857142855,0.6666666666666666
 pro iphone 15,iphone 15 pro,product_order,True,iphone pro 15,False,0.46153846153846156,0.6666666666666666
 8 pixel google,google pixel 8,product_order,True,pixel 8 google,False,0.8571428571428571,0.6666666666666666
