@@ -143,7 +143,7 @@ veterinarian emergancy clinc,veterinarian emergency clinic,multi_typo,True,veter
 vacation packge discunt availble,vacation package discount available,multi_typo,True,vacation package discount available,True,0.0,0.0
 pest contral servise lokation,pest control service location,multi_typo,True,pest control service location,True,0.0,0.0
 pollin forcast alergy,pollen forecast allergy,multi_typo,True,pollen forecast allergy,True,0.0,0.0
-airbnb accomodaton recomendation,airbnb accommodation recommendation,multi_typo,True,airing accommodation recommendation,False,0.05714285714285714,0.3333333333333333
+airbnb accomodaton recomendation,airbnb accommodation recommendation,multi_typo,True,airbnb accommodation recommendation,True,0.0,0.0
 window cleening compny rates,window cleaning company rates,multi_typo,True,window cleaning company rates,True,0.0,0.0
 wind gust wheather alert,wind gust weather alert,multi_typo,True,wind gust whether alert,False,0.08695652173913043,0.25
 rentral car comparision price,rental car comparison price,multi_typo,True,central car comparison price,False,0.07142857142857142,0.25
@@ -219,13 +219,13 @@ s24 ultra samsung,samsung s24 ultra,product_order,True,samsung s24 ultra,True,0.
 iphone pro 13,iphone 13 pro,product_order,True,iphone pro 13,False,0.46153846153846156,0.6666666666666666
 flip 5 z samsung,samsung galaxy z flip 5,product_order,True,samsung flip 5 z,False,0.4782608695652174,0.6
 7 series watch apple,apple watch series 7,product_order,True,7 series watch apple,False,0.7,1.0
-a15 oneplus,oneplus a15,product_order,True,a15 onerous,False,0.9090909090909091,1.0
+a15 oneplus,oneplus a15,product_order,True,a15 oneplus,False,0.7272727272727273,1.0
 pad air 11 ipad,ipad air 11,product_order,True,ipad pad air 11,False,0.26666666666666666,0.3333333333333333
 ultra 15 iphone pro,iphone 15 pro max,product_order,True,iphone ultra 15 pro,False,0.5263157894736842,0.5
 note 24 galaxy samsung,samsung galaxy note 24,product_order,True,samsung note 24 galaxy,False,0.6363636363636364,0.5
 11 pro max iphone,iphone 11 pro max,product_order,True,iphone 11 pro max,True,0.0,0.0
 studio display apple,apple studio display,product_order,True,studio display apple,False,0.6,0.6666666666666666
-x1 carbon lenovo thinkpad,lenovo thinkpad x1 carbon,product_order,True,x1 carbon lenore thinkpad,False,0.88,1.0
+x1 carbon lenovo thinkpad,lenovo thinkpad x1 carbon,product_order,True,x1 carbon lenovo thinkpad,False,0.8,1.0
 AAPL stock price,AAPL,stock_canon,True,AAPL,True,0.0,0.0
 tesla share price,TSLA,stock_canon,True,TSLA,True,0.0,0.0
 MSFT earnings,MSFT,stock_canon,True,MSFT,True,0.0,0.0
@@ -283,7 +283,7 @@ x,x,no_change,False,x,True,0.0,0.0
 r,r,no_change,False,r,True,0.0,0.0
 z,z,no_change,False,z,True,0.0,0.0
 kafka,kafka,no_change,False,kafka,True,0.0,0.0
-nginx,nginx,no_change,False,nine,False,0.4,1.0
+nginx,nginx,no_change,False,nginx,True,0.0,0.0
 vim,vim,no_change,False,vim,True,0.0,0.0
 pdf,pdf,no_change,False,pdf,True,0.0,0.0
 xml,xml,no_change,False,xml,True,0.0,0.0

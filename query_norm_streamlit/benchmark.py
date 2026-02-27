@@ -473,11 +473,42 @@ class GuardedPySpellNormalizer(Normalizer):
     Guards:
       - Skip tokens ≤ 4 chars  (appl, npm, gcc, css, java, rust, echo, go)
       - Skip all-uppercase tokens  (AAPL, NYC, SQ — abbreviations/tickers)
+      - Skip tokens in the brand allowlist  (airbnb, spotify, linkedin, …)
 
     Most legitimate short abbreviations are ≤ 4 chars or all-caps.
     Typos worth correcting are almost always ≥ 5 chars ('wheather', 'suhsi').
     """
     name = "PySpell (guarded)"
+
+    # Known brand/product tokens that PySpell would corrupt.
+    # Stored lowercase; comparison is done after lowercasing the token.
+    _BRAND_ALLOWLIST: frozenset = frozenset({
+        # Social / streaming
+        "airbnb", "spotify", "linkedin", "tiktok", "whatsapp",
+        "snapchat", "pinterest", "twitch", "reddit", "tumblr",
+        "discord", "telegram", "signal",
+        # Tech / SaaS
+        "github", "gitlab", "dropbox", "notion", "figma",
+        "asana", "trello", "jira", "confluence", "zendesk",
+        "hubspot", "salesforce", "shopify", "stripe", "twilio",
+        "vercel", "netlify", "supabase", "kubernetes", "terraform",
+        "ansible", "grafana", "splunk", "datadog", "snowflake",
+        "databricks", "pytorch", "tensorflow", "sklearn",
+        # Devices / brands
+        "iphone", "ipad", "macbook", "airpods", "homepod",
+        "samsung", "pixel", "oneplus", "lenovo", "thinkpad",
+        "playstation", "nintendo", "xbox",
+        # Services
+        "doordash", "grubhub", "instacart", "postmates",
+        "lyft", "ubereats",
+        # Media
+        "netflix", "hulu", "disney", "peacock", "paramount",
+        "youtube", "twitch",
+        # Finance
+        "venmo", "paypal", "cashapp", "robinhood", "coinbase",
+        # Misc tech terms PySpell corrupts
+        "nginx", "kafka", "numpy", "pandas",
+    })
 
     def __init__(self):
         if not HAS_PYSPELL:
@@ -485,7 +516,7 @@ class GuardedPySpellNormalizer(Normalizer):
         self._sc = _SC()
 
     def _skip(self, token: str) -> bool:
-        return len(token) <= 4 or token.isupper()
+        return len(token) <= 4 or token.isupper() or token in self._BRAND_ALLOWLIST
 
     def normalize(self, query: str) -> str:
         words = query.lower().split()
