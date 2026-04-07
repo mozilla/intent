@@ -1,0 +1,6 @@
+pandas>=2.0
+wordsegment
+jupyter
+symspellpy
+rapidfuzz
+pyspellchecker
